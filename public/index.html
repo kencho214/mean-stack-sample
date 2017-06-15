@@ -1,0 +1,64 @@
+<!doctype html>
+
+<html ng-app="NoteDataDemo">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>Glory Note Data Control Demo</title>
+
+	<!-- Angular min -->
+	<script src="/lib/angular/1.6.2/angular.min.js"></script>
+  <script src="/lib/angular/1.6.2/angular-resource.min.js"></script>
+  <script src="/lib/angular/1.6.2/angular-sanitize.min.js"></script>
+
+	<!-- application -->
+	<script src="js/frontend.js"></script>
+
+	<!-- css -->
+	<link rel="stylesheet" href="/lib/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="/lib/font-awesome/4.7.0/css/font-awesome.min.css">
+	<style>
+		body {
+			padding-top: 10px;
+		}
+
+		body {
+			padding-left: 10px;
+		}
+
+	</style>
+
+</head>
+
+<!-- set controller -->
+
+<body ng-controller="mainController">
+
+	<div>
+		<h3>We have <b>{{ formNoteArray.length }}</b> notes in DB.</h3>
+
+		<!-- input area -->
+		<div id="note-form" class="row">
+			<div class="col-xs-2"><input type="text" class="form-control input" placeholder="Currency ID" ng-model="formNoteData.cu"></div>
+			<div class="col-xs-2"><input type="text" class="form-control input" placeholder="Face Value" ng-model="formNoteData.fv"></div>
+			<div class="col-xs-4"><input type="text" class="form-control input" placeholder="Serial Number" ng-model="formNoteData.sn"></div>
+			<div class="col-xs-2"><button type="submit" class="btn btn-primary" ng-click="addNoteData()">Add</button></div>
+		</div>
+
+		<hr>
+
+		<!-- note list area -->
+		<!-- loop noteData in $scope.formNoteArray -->
+		<div id="note-list" class="row" ng-repeat="noteData in formNoteArray">
+			<div class="col-xs-2">{{ noteData.cu }}</div>
+			<div class="col-xs-2">{{ noteData.fv }}</div>
+			<div class="col-xs-4">{{ noteData.sn }}</div>
+			<div class="col-xs-2"><input type="checkbox" ng-click="deleteNoteData(noteData._id)"> delete</div>
+		</div>
+	</div>
+
+</body>
+
+</html>
