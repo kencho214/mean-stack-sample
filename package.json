@@ -1,0 +1,31 @@
+{
+	"name": "mean-stack-sample",
+	"version": "0.0.1",
+	"description": "Simple demo application.",
+	"main": "app.js",
+	"author": "Kento Ueda",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/kencho214/mean-stack-sample.git"
+	},
+	"license": "MIT",
+	"engines": {
+		"node": "7.x"
+	},
+	"dependencies": {
+		"body-parser": "*",
+		"express": "*",
+		"method-override": "*",
+		"mongoose": "*",
+		"morgan": "*"
+	},
+	"devDependencies": {
+		"eslint": "*",
+		"eslint-plugin-angular": "*",
+		"eslint-plugin-import": "*",
+		"eslint-plugin-promise": "*",
+		"mocha": "*",
+		"sinon": "*",
+		"supertest": "*"
+	}
+}

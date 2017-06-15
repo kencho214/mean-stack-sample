@@ -1,0 +1,4 @@
+node_modules/
+coverage/
+public/lib/
+karma.conf.js

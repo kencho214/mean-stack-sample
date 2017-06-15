@@ -1,0 +1,7 @@
+launchConfigurations/
+/node_modules/
+/coverage/
+.settings
+.vscode
+gitlog.*
+npm-debug.log
